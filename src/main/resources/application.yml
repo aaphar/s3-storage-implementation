@@ -1,10 +1,10 @@
 cloud:
   aws:
     credentials:
-      access-key: # your access key on AWS
-      secret-key: # your secret key on AWS
+      access-key: ${AWS_ACCESS_KEY}
+      secret-key: ${AWS_SECRET_KEY}
     region:
-      static: eu-central-1 # your region on AWS
+      static: ${AWS_REGION}
     stack:
       auto: false
 
