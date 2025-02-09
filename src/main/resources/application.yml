@@ -1,0 +1,28 @@
+cloud:
+  aws:
+    credentials:
+      access-key: # your access key on AWS
+      secret-key: # your secret key on AWS
+    region:
+      static: eu-central-1 # your region on AWS
+    stack:
+      auto: false
+
+application:
+  bucket:
+    name: cofunded
+
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2MB
+      max-file-size: 5MB
+      max-request-size: 10MB
+
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+
+server:
+  port: 9090
